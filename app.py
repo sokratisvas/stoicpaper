@@ -1,6 +1,8 @@
 from flask import Flask, render_template
 import requests
 import json
+import random
+
 
 app = Flask(__name__)
 COUNTS = {"Marcus Aurelius": 0, "Seneca": 0, "Epictetus": 0, "Cato": 0, "Zeno": 0}
@@ -34,10 +36,10 @@ def get_philosopher_quote(philosopher):
             quote["body"] for quote in philosopher_quotes_json["data"]
         )
 
+    random.shuffle(philosopher_quotes)
     quote = philosopher_quotes[COUNTS[philosopher] % total_quotes]
-
-    return f"<h2>{philosopher}</h2><p>{quote}</p>"
+    return render_template("quote.html", philosopher=philosopher, quote=quote)
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)

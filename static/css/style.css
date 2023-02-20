@@ -1,0 +1,74 @@
+body {
+    background-color: #f2e6d8;
+    font-family: 'Times New Roman', serif;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.philosopher-btn {
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    background-color: #2c3e50;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.row1 {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.row2 {
+    text-align: center;
+    margin: 20px auto;
+}
+
+button:hover {
+    background-color: #bf9000;
+    color: #fff;
+}
+
+#philosophers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+img.philosopher-image {
+    max-width: 25%;
+    display: block;
+    margin: auto;
+}
+
+.quote-box {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 700px;
+    text-align: center;
+    font-family: 'IM Fell English', serif;
+    text-transform: uppercase;
+}

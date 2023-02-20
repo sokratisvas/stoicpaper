@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Philosopher Quote</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="quote-box">
+        <h1>{{ philosopher }}</h1>
+        <p>{{ quote }}</p>
+        <img class="philosopher-image"
+            src="{{ url_for('static', filename='images/' + philosopher.replace(' ', '-').lower() + '.png') }}"
+            alt="{{ philosopher }}">
+    </div>
+</body>
+
+</html>

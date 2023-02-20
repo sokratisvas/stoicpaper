@@ -3,29 +3,23 @@
 
 <head>
     <title>Stoic Philosophers</title>
-    <script>
-        function getQuote(philosopher) {
-            fetch(`/philosophers/${philosopher}`)
-                .then(response => response.text())
-                .then(html => document.getElementById('quote').innerHTML = html)
-        }
-
-    </script>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <script src="static/js/display_quote.js"> </script>
 </head>
 
 <body>
     <h1>Stoic Philosophers</h1>
     <p>Select a philosopher to learn more:</p>
-    <button onclick="getQuote('Marcus Aurelius')">Marcus Aurelius</button>
-    <br>
-    <button onclick="getQuote('Seneca')">Seneca</button>
-    <br>
-    <button onclick="getQuote('Epictetus')">Epictetus</button>
-    <br>
-    <button onclick="getQuote('Cato')">Cato</button>
-    <br>
-    <button onclick="getQuote('Zeno')">Zeno</button>
-    <br><br>
+    <div class="row1">
+        <button class="philosopher-btn" id="marcus-aurelius" onclick="getQuote('Marcus Aurelius')">Marcus
+            Aurelius</button>
+        <button class="philosopher-btn" id="seneca" onclick="getQuote('Seneca')">Seneca</button>
+        <button class="philosopher-btn" id="epictetus" onclick="getQuote('Epictetus')">Epictetus</button>
+    </div>
+    <div class="row2">
+        <button class="philosopher-btn" id="cato" onclick="getQuote('Cato')">Cato</button>
+        <button class="philosopher-btn" id="zeno" onclick="getQuote('Zeno')">Zeno</button>
+    </div>
     <div id="quote"></div>
 </body>
 
