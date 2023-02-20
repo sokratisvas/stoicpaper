@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Stoic Philosophers</title>
+    <script>
+        function getQuote(philosopher) {
+            fetch(`/philosophers/${philosopher}`)
+                .then(response => response.text())
+                .then(html => document.getElementById('quote').innerHTML = html)
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>Stoic Philosophers</h1>
+    <p>Select a philosopher to learn more:</p>
+    <button onclick="getQuote('Marcus Aurelius')">Marcus Aurelius</button>
+    <br>
+    <button onclick="getQuote('Seneca')">Seneca</button>
+    <br>
+    <button onclick="getQuote('Epictetus')">Epictetus</button>
+    <br>
+    <button onclick="getQuote('Cato')">Cato</button>
+    <br>
+    <button onclick="getQuote('Zeno')">Zeno</button>
+    <br><br>
+    <div id="quote"></div>
+</body>
+
+</html>
